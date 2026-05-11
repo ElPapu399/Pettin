@@ -1,27 +1,30 @@
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { IoNotifications } from "react-icons/io5";
 
 function Navbar() {
     return (
         <div>
-            <nav className="my-4 px-6">
+            <nav className="px-6 py-6 shadow-lg shadow-purple-200">
                 <div className="grid grid-cols-3 items-center">
                     <div className="flex justify-start">
-                        <div href="/" className="flex items-center text-gray-900 no-underline">
-                            <Link className="text-2xl font-bold text-purple-500" to="/">Pettin</Link>
+                        <div className="flex items-center text-gray-900 no-underline">
+                            <Link className="text-2xl font-bold text-purple-700" to="/home">Pettin</Link>
                         </div>
                     </div>
-                    <div class="flex justify-center gap-4">
-                        <Link className="text-gray-700 hover:text-black" to="/explore">Explore</Link>
-                        <Link className="text-gray-700 hover:text-black" to="/messages">Messages</Link>
-                        <Link className="text-gray-700 hover:text-black" to="/matches">Matches</Link>
-                        <Link className="text-gray-700 hover:text-black" to="/profile">Profile</Link>
+                    <div className="flex justify-center gap-8">
+                        <NavLink className={({ isActive }) => isActive ? "font-bold text-purple-700" : "text-black hover:text-purple-700"} to="/explore">Explorar</NavLink>
+                        <NavLink className={({ isActive }) => isActive ? "font-bold text-purple-700" : "text-black hover:text-purple-700"} to="/messages">Mensajes</NavLink>
+                        <NavLink className={({ isActive }) => isActive ? "font-bold text-purple-700" : "text-black hover:text-purple-700"} to="/matches">Matches</NavLink>
+                        <NavLink className={({ isActive }) => isActive ? "font-bold text-purple-700" : "text-black hover:text-purple-700"} to="/profile">Perfil</NavLink>
                     </div>
                     <div className="flex justify-end">
-                        <IoNotifications
-                            size={28}
-                            className="text-gray-600"
-                        />
+                        <Link to="/notifications">
+                            <IoNotifications
+                                size={28}
+                                className="text-gray-600"
+                            />
+                        </Link>
                     </div>
                 </div>
             </nav>
