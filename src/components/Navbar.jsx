@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { IoNotifications } from "react-icons/io5";
 
 function Navbar() {
     return (
@@ -15,6 +16,12 @@ function Navbar() {
                         <Link className="text-gray-700 hover:text-black" to="/messages">Messages</Link>
                         <Link className="text-gray-700 hover:text-black" to="/matches">Matches</Link>
                         <Link className="text-gray-700 hover:text-black" to="/profile">Profile</Link>
+                    </div>
+                    <div className="flex justify-end">
+                        <IoNotifications
+                            size={28}
+                            className="text-gray-600"
+                        />
                     </div>
                 </div>
             </nav>
