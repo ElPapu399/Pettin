@@ -19,12 +19,12 @@ function App() {
 
         <main className="flex-1">
           <Routes>
-            <Route path="/home" element={<Suspense fallback={<div>Cargando...</div>}><Home /></Suspense>} />
-            <Route path="/explore" element={<Suspense fallback={<div>Cargando...</div>}><Explore /></Suspense>} />
-            <Route path="/messages" element={<Suspense fallback={<div>Cargando...</div>}><Messages /></Suspense>} />
-            <Route path="/matches" element={<Suspense fallback={<div>Cargando...</div>}><Match /></Suspense>} />
-            <Route path="/profile" element={<Suspense fallback={<div>Cargando...</div>}><Profile /></Suspense>} />
-            <Route path="/notifications" element={<Suspense fallback={<div>Cargando...</div>}><Notifications /></Suspense>} />
+            <Route path="/home" element={<Suspense fallback={<div>Cargando...</div>}> <Home/> </Suspense>}/>
+            <Route path="/explore" element={<Suspense fallback={<div>Cargando...</div>}> <Explore/> </Suspense>}/>
+            <Route path="/messages" element={<Suspense fallback={<div>Cargando...</div>}> <Messages/> </Suspense>}/>
+            <Route path="/matches" element={<Suspense fallback={<div>Cargando...</div>}> <Match/> </Suspense>}/>
+            <Route path="/profile" element={<Suspense fallback={<div>Cargando...</div>}> <Profile/> </Suspense>}/>
+            <Route path="/notifications" element={<Suspense fallback={<div>Cargando...</div>}> <Notifications/> </Suspense>}/>
           </Routes>
         </main>
 
